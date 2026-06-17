@@ -21,6 +21,8 @@ access to sensitive datasets or production code.
 For a fast review, start with the [public proof pack](docs/public-proof-pack.md).
 For a concrete generated artifact, read the
 [synthetic decision brief](docs/generated/synthetic-decision-brief.md).
+For repository hygiene, read the
+[public readiness scorecard](docs/generated/public-readiness-scorecard.md).
 
 ## Where I Contribute In A Hackathon
 
@@ -61,6 +63,8 @@ npm test
 npm run demo
 npm run report
 npm run report:check
+npm run scorecard
+npm run scorecard:check
 npm run demo:workflow
 npm run public:scan
 ```
@@ -105,8 +109,10 @@ The generated decision brief turns the synthetic fixtures into a compact product
 readout:
 
 - [Synthetic decision brief](docs/generated/synthetic-decision-brief.md)
+- [Public readiness scorecard](docs/generated/public-readiness-scorecard.md)
 - Generator: `scripts/generate-synthetic-decision-brief.js`
-- Tests: `test/synthetic-decision-brief.test.js`
+- Tests: `test/synthetic-decision-brief.test.js` and
+  `test/public-readiness-scorecard.test.js`
 
 ## Publication Safety Scan
 

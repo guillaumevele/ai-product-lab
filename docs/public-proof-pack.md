@@ -15,6 +15,7 @@ The verification suite runs:
 - Unit tests for repeatability scoring and workflow gating.
 - Synthetic demos that print pass, fail and blocked decisions.
 - A generated synthetic decision brief freshness check.
+- A generated public readiness scorecard freshness check.
 - A technical publication scan for token-shaped secrets, personal email
   exposure and optional private blocklist terms.
 
@@ -37,6 +38,7 @@ Decision: pass
 Action: generate_unreviewed_legal_conclusion
 Decision: block
 Synthetic decision brief is up to date.
+Public readiness scorecard is up to date.
 Public safety scan passed
 ```
 
@@ -50,7 +52,8 @@ flowchart LR
   Gate --> ActionDecision[Allow, require controls, or block]
   ProductDecision --> Brief[Synthetic decision brief]
   ActionDecision --> Brief
-  Brief --> Tests[Node tests and CI]
+  Brief --> Scorecard[Public readiness scorecard]
+  Scorecard --> Tests[Node tests and CI]
   SafetyScan[Technical publication scan] --> Tests
 ```
 
@@ -61,6 +64,7 @@ flowchart LR
 | Repeatability harness | `src/eval/repeatability-score.js` and `test/repeatability-score.test.js` | Model-adjacent product output can be evaluated with explicit thresholds. |
 | Workflow gate | `src/eval/workflow-gate.js` and `test/workflow-gate.test.js` | Automation needs confirmation, auditability, reversibility and review boundaries. |
 | Decision brief | `docs/generated/synthetic-decision-brief.md` | Synthetic product results can be summarized into a reviewer-friendly artifact. |
+| Readiness scorecard | `docs/generated/public-readiness-scorecard.md` | Repository hygiene and reviewer evidence can be inspected quickly. |
 | Synthetic fixtures | `examples/` | Public evidence can be useful without using real user, patient, client or production data. |
 | Case studies | `case-studies/` | Private product lessons can be translated into redacted product reasoning. |
 | Safety boundary | `SAFETY_AND_SCOPE.md` | The repo defines publication boundaries and conceptual redaction rules. |

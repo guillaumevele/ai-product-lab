@@ -11,8 +11,10 @@
     "public:scan": "node scripts/public-safety-scan.js",
     "report": "node scripts/generate-synthetic-decision-brief.js",
     "report:check": "node scripts/generate-synthetic-decision-brief.js --check",
+    "scorecard": "node scripts/generate-public-readiness-scorecard.js",
+    "scorecard:check": "node scripts/generate-public-readiness-scorecard.js --check",
     "test": "node --test",
-    "verify": "npm test && npm run demo && npm run report:check && npm run public:scan"
+    "verify": "npm test && npm run demo && npm run report:check && npm run scorecard:check && npm run public:scan"
   },
   "engines": {
     "node": ">=20"

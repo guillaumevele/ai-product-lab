@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "description": "Synthetic public-readiness gates for reviewer-facing repository hygiene.",
+    "contains_real_user_data": false,
+    "contains_private_project_details": false
+  },
+  "gates": [
+    {
+      "id": "unit_tests",
+      "label": "Unit tests",
+      "status": "pass",
+      "evidence": "npm test",
+      "reviewerValue": "Core evaluation logic has executable checks."
+    },
+    {
+      "id": "demo_outputs",
+      "label": "Synthetic demos",
+      "status": "pass",
+      "evidence": "npm run demo",
+      "reviewerValue": "A reviewer can inspect pass, fail and blocked decisions quickly."
+    },
+    {
+      "id": "generated_reports",
+      "label": "Generated reports",
+      "status": "pass",
+      "evidence": "npm run report:check && npm run scorecard:check",
+      "reviewerValue": "Reviewer-facing artifacts are generated from source fixtures."
+    },
+    {
+      "id": "publication_scan",
+      "label": "Technical publication scan",
+      "status": "pass",
+      "evidence": "npm run public:scan",
+      "reviewerValue": "Token-shaped secrets and configured blocklist terms are checked before publishing."
+    },
+    {
+      "id": "synthetic_data",
+      "label": "Synthetic fixtures only",
+      "status": "pass",
+      "evidence": "examples/",
+      "reviewerValue": "Public examples do not require real user, client or production data."
+    },
+    {
+      "id": "boundary_docs",
+      "label": "Publication boundary",
+      "status": "pass",
+      "evidence": "SAFETY_AND_SCOPE.md",
+      "reviewerValue": "The repository states what is intentionally excluded."
+    },
+    {
+      "id": "ci_workflow",
+      "label": "CI workflow",
+      "status": "pass",
+      "evidence": ".github/workflows/test.yml",
+      "reviewerValue": "The verification suite runs on GitHub Actions for public pushes."
+    }
+  ]
+}
