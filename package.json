@@ -1,0 +1,20 @@
+{
+  "name": "ai-product-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Public, redacted AI product experiments and evaluation notes by Guillaume Vele.",
+  "scripts": {
+    "demo": "node scripts/demo-repeatability.js && node scripts/demo-workflow-gate.js",
+    "demo:repeatability": "node scripts/demo-repeatability.js",
+    "demo:workflow": "node scripts/demo-workflow-gate.js",
+    "public:scan": "node scripts/public-safety-scan.js",
+    "report": "node scripts/generate-synthetic-decision-brief.js",
+    "report:check": "node scripts/generate-synthetic-decision-brief.js --check",
+    "test": "node --test",
+    "verify": "npm test && npm run demo && npm run report:check && npm run public:scan"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

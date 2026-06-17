@@ -1,0 +1,3 @@
+# Copy this file to .public-safety-blocklist for local-only scans.
+# Keep real private project names, client names and internal identifiers out of Git.
+internal-codename-example

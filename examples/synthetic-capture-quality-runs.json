@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "description": "Synthetic, public-safe repeatability runs for a capture-quality product gate.",
+    "contains_real_user_data": false,
+    "contains_medical_claims": false
+  },
+  "thresholds": {
+    "maxCoefficientOfVariationPct": 8,
+    "maxAbsoluteDelta": 8
+  },
+  "scenarios": [
+    {
+      "id": "stable_capture_quality",
+      "label": "Stable capture quality under small framing changes",
+      "metric": "capture_quality_score",
+      "values": [81, 83, 84, 81]
+    },
+    {
+      "id": "unstable_capture_quality",
+      "label": "Unstable capture quality under mixed lighting",
+      "metric": "capture_quality_score",
+      "values": [82, 43, 60, 78]
+    }
+  ]
+}
+

@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "description": "Synthetic automation requests used to test workflow gate decisions.",
+    "contains_real_user_data": false,
+    "contains_sensitive_real_world_data": false,
+    "contains_private_project_details": false
+  },
+  "actions": [
+    {
+      "id": "summarize_public_notes",
+      "label": "Summarize public notes into a short brief",
+      "isReadOnly": true,
+      "touchesExternalState": false,
+      "touchesSensitiveData": false,
+      "isDestructive": false,
+      "isIrreversible": false,
+      "usesAutomation": false,
+      "hasAuditTrail": true,
+      "hasExplicitConfirmation": false,
+      "hasRollbackPlan": true,
+      "producesMedicalOrLegalAdvice": false,
+      "hasHumanReview": false
+    },
+    {
+      "id": "publish_public_readme_update",
+      "label": "Publish a reviewed public README update",
+      "isReadOnly": false,
+      "touchesExternalState": true,
+      "touchesSensitiveData": false,
+      "isDestructive": false,
+      "isIrreversible": false,
+      "usesAutomation": true,
+      "hasAuditTrail": true,
+      "hasExplicitConfirmation": true,
+      "hasRollbackPlan": true,
+      "producesMedicalOrLegalAdvice": false,
+      "hasHumanReview": false
+    },
+    {
+      "id": "send_sensitive_document_to_external_model",
+      "label": "Send a synthetic sensitive document to an external model",
+      "isReadOnly": false,
+      "touchesExternalState": true,
+      "touchesSensitiveData": true,
+      "isDestructive": false,
+      "isIrreversible": false,
+      "usesAutomation": true,
+      "hasAuditTrail": false,
+      "hasExplicitConfirmation": false,
+      "hasRollbackPlan": false,
+      "producesMedicalOrLegalAdvice": false,
+      "hasHumanReview": false
+    },
+    {
+      "id": "delete_unreviewed_project_assets",
+      "label": "Delete unreviewed project assets",
+      "isReadOnly": false,
+      "touchesExternalState": true,
+      "touchesSensitiveData": false,
+      "isDestructive": true,
+      "isIrreversible": true,
+      "usesAutomation": true,
+      "hasAuditTrail": false,
+      "hasExplicitConfirmation": false,
+      "hasRollbackPlan": false,
+      "producesMedicalOrLegalAdvice": false,
+      "hasHumanReview": false
+    },
+    {
+      "id": "generate_unreviewed_legal_conclusion",
+      "label": "Generate an unreviewed legal conclusion",
+      "isReadOnly": false,
+      "touchesExternalState": false,
+      "touchesSensitiveData": true,
+      "isDestructive": false,
+      "isIrreversible": false,
+      "usesAutomation": true,
+      "hasAuditTrail": true,
+      "hasExplicitConfirmation": true,
+      "hasRollbackPlan": true,
+      "producesMedicalOrLegalAdvice": true,
+      "hasHumanReview": false
+    }
+  ]
+}

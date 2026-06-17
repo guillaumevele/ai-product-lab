@@ -1,0 +1,16 @@
+.DS_Store
+node_modules/
+coverage/
+.env
+.env.*
+.public-safety-blocklist
+.public-safety-blocklist.*
+!.public-safety-blocklist.example
+*.log
+private/
+local/
+data/
+exports/
+screenshots/*
+!screenshots/public/
+!screenshots/public/README.md
