@@ -23,6 +23,8 @@ For a concrete generated artifact, read the
 [synthetic decision brief](docs/generated/synthetic-decision-brief.md).
 For repository hygiene, read the
 [public readiness scorecard](docs/generated/public-readiness-scorecard.md).
+For a focused agent-run release gate, see
+[Agent Proof Kit](https://github.com/guillaumevele/agent-proof-kit).
 
 ## Where I Contribute In A Hackathon
 
