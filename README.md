@@ -2,10 +2,12 @@
 
 Runnable public artifacts from AI product experiments by Guillaume Vele.
 
-This repository focuses on evaluation, workflow safety and product judgment for
-AI-assisted user experiences. It includes synthetic fixtures, small test
-harnesses, workflow gates and publication checks that can be inspected without
-access to sensitive datasets or production code.
+This repository is the product-judgment and case-study companion to
+[agent-proof-kit](https://github.com/guillaumevele/agent-proof-kit). It focuses on
+framing AI product behavior as testable workflow quality: public-safe fixtures,
+short evaluation harnesses and case studies. The canonical release-gate and
+secret-scan mechanics live in agent-proof-kit; this repo shows how those checks
+fit real product decisions rather than re-implementing them.
 
 ## What To Notice In 30 Seconds
 
@@ -15,8 +17,8 @@ access to sensitive datasets or production code.
   model output.
 - I can turn vague product risk into testable checks, synthetic examples and
   clear release decisions.
-- The public artifacts are intentionally synthetic; the goal is to show method
-  and product judgment with a clear publication boundary.
+- The public artifacts use synthetic fixtures so the method is inspectable
+  without exposing private product code or data.
 
 For a fast review, start with the [public proof pack](docs/public-proof-pack.md).
 For a concrete generated artifact, read the
@@ -118,16 +120,19 @@ readout:
 
 ## Publication Safety Scan
 
-The repo includes a lightweight public scan:
+This repo keeps a minimal local scan for convenience:
 
 ```bash
 npm run public:scan
 ```
 
 It checks for token-shaped secrets, personal email exposure and optional
-blocklist terms. It is a technical scan, not a guarantee against conceptual
-over-disclosure. See the [public proof pack](docs/public-proof-pack.md) for the
-local pre-publication workflow.
+blocklist terms. The canonical, more complete release gate lives in
+[agent-proof-kit](https://github.com/guillaumevele/agent-proof-kit); this repo
+defers to it rather than duplicating that logic. A technical scan is not a
+guarantee against conceptual over-disclosure. See the
+[public proof pack](docs/public-proof-pack.md) for the local pre-publication
+workflow.
 
 ## What This Demonstrates
 
@@ -135,12 +140,6 @@ local pre-publication workflow.
 - A publication workflow that separates synthetic public evidence from
   sensitive production material.
 - Lightweight harnesses and templates that support product decisions.
-
-## What This Does Not Prove
-
-- It does not expose private product code.
-- It does not claim medical or legal authority.
-- It does not include real user, patient or client data.
 
 ## Boundaries
 
